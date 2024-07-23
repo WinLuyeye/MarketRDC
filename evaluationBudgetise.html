@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Market Rdc | site web d'actualités</title>
+
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="">
+
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
+
+  <!-- Css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-icons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/colors/red.css" />
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="img/Fleche1.png">
+  <link rel="apple-touch-icon" href="img/Fleche1.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/Fleche1.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/Fleche1.png">
+
+  <!-- Lazyload (must be placed in head in order to work) -->
+  <script src="js/lazysizes.min.js"></script>
+
+</head>
+
+<body class="style-politics single-post">
+
+  <!-- Preloader -->
+  <div class="loader-mask">
+    <div class="loader">
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Bg Overlay -->
+  <div class="content-overlay"></div>
+  <!-- Sidenav -->    
+  <header class="sidenav" id="sidenav">
+
+    <!-- close -->
+    <div class="sidenav__close">
+      <button class="sidenav__close-button" id="sidenav__close-button" aria-label="close sidenav">
+        <i class="ui-close sidenav__close-icon"></i>
+      </button>
+    </div>
+    
+    <!-- Nav -->
+    <nav class="sidenav__menu-container">
+      <ul class="sidenav__menu" role="menubar">
+        <li>
+          <a href="index.html" class="sidenav__menu-url">Accueil</a>
+        </li>
+        <li>
+          <a href="taux_de_change.html" class="sidenav__menu-url">Taux de change</a>
+        </li>
+        <li>
+          <a href="agenda_economique.html" class="sidenav__menu-url">Agenda Economique</a>
+        </li>        
+
+        <!-- Categories -->
+        <li>
+          <a href="#" class="sidenav__menu-url">Language Economique</a>
+        </li>
+        <li>
+          <a href="#" class="sidenav__menu-url">Market RDC</a>
+        </li>
+        <li><a href="index.html" class="sidenav__menu-url">Actualité</a></li>
+        <li><a href="agenda_economique.html" class="sidenav__menu-url">Evenement</a></li>
+        <li><a href="contact.html" class="sidenav__menu-url">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="socials sidenav__socials"> 
+      <a class="social social-facebook" href="https://www.facebook.com/profile.php?id=61562658741420" target="_blank" aria-label="facebook">
+        <i class="ui-facebook"></i>
+      </a>
+      <a class="social social-twitter" href="https://x.com/marketrdc" target="_blank" aria-label="twitter">
+        <i class="ui-twitter"></i>
+      </a>
+      <a class="social social-youtube" href="https://www.youtube.com/@MarketRDC" target="_blank" aria-label="youtube">
+        <i class="ui-youtube"></i>
+      </a>
+      <a class="social social-instagram" href="https://www.instagram.com/market.rdc/" target="_blank" aria-label="instagram">
+        <i class="ui-instagram"></i>
+      </a>
+    </div>
+  </header> <!-- end sidenav -->
+  <main class="main oh" id="main">    
+
+    <!-- Trending Now -->
+    <!-- Trending Now -->
+    <div class="container">
+      <div class="trending-now trending-now--1">
+        <span class="trending-now__label">
+          <i class="ui-flash"></i>
+          <span class="trending-now__text d-lg-inline-block d-none">COURS DE CHANGE</span>
+        </span>
+        <div class="newsticker">
+          <ul class="newsticker__list" id="exchange-rates">
+              <!-- Les données seront insérées ici par JavaScript -->
+          </ul>
+      </div>
+        <div class="newsticker-buttons">
+          <button class="newsticker-button newsticker-button--prev" id="newsticker-button--prev" aria-label="next article"><i class="ui-arrow-left"></i></button>
+          <button class="newsticker-button newsticker-button--next" id="newsticker-button--next" aria-label="previous article"><i class="ui-arrow-right"></i></button>
+        </div>
+      </div> <!-- end trending now -->
+    </div>     
+    
+    <!-- Header -->
+    <header class="header d-lg-block d-none">
+      <div class="container">
+        <div class="flex-parent">
+      
+          <!-- Menu -->
+          <nav class="flex-child header__menu d-none d-lg-block">
+            <ul class="header__menu-list">
+              <li><a href="index.html">Actualité</a></li>
+              <li><a href="agenda_economique.html">Evenement</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav> <!-- end menu -->
+
+          <div class="flex-child text-center">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+              <img class="logo__img" src="img/logo.png" alt="logo">
+            </a>
+          </div>
+
+          <!-- Socials -->
+          <div class="flex-child">
+            <div class="socials socials--nobase socials--dark justify-content-end"> 
+              <a class="social social-facebook" href="https://www.facebook.com/profile.php?id=61562658741420" target="_blank" aria-label="facebook">
+                <i class="ui-facebook"></i>
+              </a>
+              <a class="social social-twitter" href="https://x.com/marketrdc" target="_blank" aria-label="twitter">
+                <i class="ui-twitter"></i>
+              </a>
+              <a class="social social-youtube" href="https://www.youtube.com/@MarketRDC" target="_blank" aria-label="youtube">
+                <i class="ui-youtube"></i>
+              </a>
+              <a class="social social-instagram" href="https://www.instagram.com/market.rdc/" target="_blank" aria-label="instagram">
+                <i class="ui-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- end container -->
+    </header> <!-- end header -->   
+
+    <header class="nav nav--1">
+      <div class="nav__holder nav--sticky">
+        <div class="container relative">
+          <div class="flex-parent">
+
+            <div class="flex-child">
+              <!-- Side Menu Button -->
+              <button class="nav-icon-toggle" id="nav-icon-toggle" aria-label="Open side menu">
+                <span class="nav-icon-toggle__box">
+                  <span class="nav-icon-toggle__inner"></span>
+                </span>
+              </button>
+            </div>            
+
+            <!-- Nav-wrap -->
+            <nav class="flex-child nav__wrap d-none d-lg-block">              
+              <ul class="nav__menu">
+
+                <li class="active">
+                  <a href="index.html">Accueil</a>
+                </li>
+
+                <li>
+                  <a href="taux_de_change.html">Taux de change</a>
+                </li>
+
+                <li class="">
+                  <a href="agenda_economique.html">Agenda Economique</a>
+                </li>
+
+                <li class="">
+                  <a href="#">Language Economique</a>
+                </li>
+
+                 <li class="">
+                  <a href="#">Market</a>
+                </li>
+              </ul> <!-- end menu -->
+            </nav> <!-- end nav-wrap -->
+
+            <!-- Logo Mobile -->
+            <a href="index.html" class="logo logo-mobile d-lg-none">
+              <img class="logo__img" src="img/logo.png"  alt="logo">
+            </a>
+
+            <!-- Nav Right -->
+            <div class="flex-child">
+              <div class="nav__right">
+
+                <!-- Search -->
+                <div class="nav__right-item nav__search">
+                  <a href="#" class="nav__search-trigger" id="nav__search-trigger">
+                    <i class="ui-search nav__search-trigger-icon"></i>
+                  </a>
+                  <div class="nav__search-box" id="nav__search-box">
+                    <form class="nav__search-form">
+                      <input type="text" placeholder="Search an article" class="nav__search-input">
+                      <button type="submit" class="search-button btn btn-lg btn-color btn-button">
+                        <i class="ui-search nav__search-icon"></i>
+                      </button>
+                    </form>
+                  </div>                
+                </div>             
+
+              </div> <!-- end nav right -->
+            </div>            
+          
+          </div> <!-- end flex-parent -->
+
+        </div>          
+      </div>
+    </header> <!-- end navigation -->
+    
+    <!-- Breadcrumbs -->
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="index.html" class="breadcrumbs__url">Acueil</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="index.html" class="breadcrumbs__url">Economie</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--current">
+          RDC : Le Ministre d'Etat, ministre du Budget ...
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-container container" id="main-container">
+      
+      <!-- Entry Image -->
+      <div class="thumb thumb--size-6">
+        <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/img_2.jpg'); object-fit: cover; object-position: top;">
+          <div class="bottom-gradient"></div>
+          <div class="thumb-text-holder thumb-text-holder--2">
+            <ul class="entry__meta">
+              <li>
+                <a href="#" class="entry__meta-category" style="font-size: 30px;">Economie <img src="img/finance.png" alt="" style="width: 4%;margin-left: 1%;margin-bottom: 8px;"></a></a>
+              </li>
+            </ul>
+            <h1 class="thumb-entry-title single-post__thumb-entry-title">
+                Évaluation à mi-Parcours du Plan de Travail Budgétisé Annuel (PTBA - 2024)
+            </h1>
+            <div class="entry__meta-holder">
+              <ul class="entry__meta">
+                <li class="entry__meta-author">
+                  <span>par</span>
+                  <a href="#">Rédaction</a>
+                </li>
+                <li class="entry__meta-date">
+                  Jul 12, 2024
+                </li>
+              </ul>
+              <ul class="entry__meta">
+                <li class="entry__meta-views">
+                  <i class="ui-eye"></i>
+                  <span>1356</span>
+                </li>
+                <li class="entry__meta-comments">
+                  <a href="#">
+                    <i class="ui-chat-empty"></i>13
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="row">  
+
+        <!-- post content -->
+        <div class="col-lg-8 blog__content mb-72">
+          <!-- standard post -->
+          <article class="entry mb-0">
+
+            <div class="entry__article-wrap mt-0">
+
+              <!-- Share -->
+              <div class="entry__share">
+                <div class="sticky-col">
+                  <div class="socials socials--rounded socials--large">
+                    <a class="social social-facebook" href="https://www.facebook.com/profile.php?id=61562658741420" title="facebook" target="_blank" aria-label="facebook">
+                      <i class="ui-facebook"></i>
+                    </a>
+                    <a class="social social-twitter" href="https://x.com/marketrdc" title="twitter" target="_blank" aria-label="twitter">
+                      <i class="ui-twitter"></i>
+                    </a>
+                    <a class="social social-youtube" href="https://www.youtube.com/@MarketRDC" title="youtube" target="_blank" aria-label="youtube">
+                      <i class="ui-youtube"></i>
+                    </a>
+                    <a class="social social-instagram" href="https://www.instagram.com/market.rdc/" title="instagram" target="_blank" aria-label="instagram">
+                      <i class="ui-instagram"></i>
+                    </a>
+                  </div>
+                </div>                  
+              </div> <!-- share -->
+
+              <div class="entry__article">
+                <p>Le Prof. Bruno Tshibangu Kabaji conduit l'ANAPI vers l'optimisation des ressources et des Résultats</p>
+
+                <p>L'Agence Nationale pour la Promotion des Investissements (ANAPI), sous la direction de son Directeur Général, le Prof. Bruno Tshibangu Kabaji, entame une évaluation à mi-parcours de son Plan de Travail Budgétisé Annuel (PTBA) 2024. Validée par le Conseil d'Administration en décembre 2023, cette initiative se déroule du 16 au 19 juillet 2024 au village Vénus à Bibwa, dans la commune de la N’Sele, à l'Est de la ville-province de Kinshasa. </p>
+
+                <p>L'objectif principal de cette revue à mi-parcours est de mesurer le niveau de réalisation des activités programmées de Janvier à Juin 2024 et de comparer les résultats obtenus avec les objectifs fixés. Cette démarche permet également d'identifier les ajustements nécessaires pour garantir l'atteinte des objectifs d'ici la fin de l'année.</p>
+                <!-- tags -->
+                <div class="entry__tags">
+                  <i class="ui-tags"></i>
+                  <span class="entry__tags-label">Tags:</span>
+                  <a href="#" rel="tag">Economie</a><a href="#" rel="tag">RDC</a>
+                </div> <!-- end tags -->
+
+              </div> <!-- end entry article -->
+            </div> <!-- end entry article wrap -->
+            
+
+            <!-- Newsletter Wide -->
+            <div class="newsletter-wide">
+              <div class="widget widget_mc4wp_form_widget">
+                <div class="newsletter-wide__container">
+                  <div class="newsletter-wide__text-holder">
+                    <p class="newsletter-wide__text">
+                      <i class="ui-email newsletter__icon"></i>
+                      Abonnez-vous à notre actualité quotidienne
+                    </p>
+                  </div>
+                  <div class="newsletter-wide__form">
+                    <form class="mc4wp-form" method="post">
+                      <div class="mc4wp-form-fields">
+                        <div class="form-group">
+                          <input type="email" name="EMAIL" placeholder="Votre adresse mail" required="">
+                        </div>
+                        <div class="form-group">
+                          <input type="submit" class="btn btn-lg btn-color" value="S'abonner">
+                        </div>
+                      </div>
+                    </form>
+                  </div> 
+                </div>         
+              </div>
+            </div> <!-- end newsletter wide -->
+
+            <!-- Prev / Next Post -->
+            <nav class="entry-navigation">
+              <div class="clearfix">
+                <div class="entry-navigation--left">
+                  <i class="ui-arrow-left"></i>
+                  <span class="entry-navigation__label">Post précédent</span>
+                  <div class="entry-navigation__link">
+                    <a href="#" rel="next">Comment concevoir votre première application mobile</a>
+                  </div>
+                </div>
+                <div class="entry-navigation--right">
+                  <span class="entry-navigation__label">Prochain article</span>
+                  <i class="ui-arrow-right"></i>
+                  <div class="entry-navigation__link">
+                    <a href="#" rel="prev">Publication vidéo au format Youtube. Réalisé avec WordPress</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            <!-- Author -->
+            <div class="entry-author clearfix">
+              <img alt="" data-src="img/content/single/author.jpg" src="img/empty.png" class="avatar lazyload">
+              <div class="entry-author__info">
+                <h6 class="entry-author__name">
+                  <a href="#">Serge</a>
+                </h6>
+                <p class="mb-0">Le programme d'actions du gouvernement pour les cinq prochaines années, avec un coût estimé à 277.066 milliards FC, est ambitieux et vise à transformer l'économie du pays. Une gestion efficace de ce budget peut apporter des améliorations significatives dans les secteurs clés tels que l'éducation, la santé et les infrastructures.</p>
+              </div>
+            </div>
+
+            
+
+            <!-- Related Posts -->
+            <section class="section related-posts mt-40 mb-0">
+              <div class="title-wrap title-wrap--line title-wrap--pr">
+                <h3 class="section-title">Articles Liés</h3>
+              </div>
+
+              <!-- Slider -->
+              <div id="owl-posts-3-items" class="owl-carousel owl-theme owl-carousel--arrows-outside">
+                <article class="entry thumb thumb--size-1">
+                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('https://s.rfi.fr/media/display/173c5a74-1645-11ea-b35e-005056bf87d6/w:980/p:16x9/boulevard_du_30_juin_kinshasa_0.webp');">
+                    <div class="bottom-gradient"></div>
+                    <div class="thumb-text-holder">   
+                      <h2 class="thumb-entry-title">
+                        <a href="single-post.html">Le FMI félicite l'économie de la RDC et débloque la dernière tranche d’un plan de 1,5 milliard</a>
+                      </h2>
+                    </div>
+                    <a href="single-post.html" class="thumb-url"></a>
+                  </div>
+                </article>
+                <article class="entry thumb thumb--size-1">
+                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('https://zoom-eco.net/wp-content/uploads/2024/07/31A3AFCC-B85B-425B-A7BD-C4D09EF0B6CD.jpeg');">
+                    <div class="bottom-gradient"></div>
+                    <div class="thumb-text-holder">   
+                      <h2 class="thumb-entry-title">
+                        <a href="single-post.html">BANQUESRDC : Mukoko Samba envisage un 2e tirage auprès de banques commerciales pour garantir...</a>
+                      </h2>
+                    </div>
+                    <a href="single-post.html" class="thumb-url"></a>
+                  </div>
+                </article>
+                <article class="entry thumb thumb--size-1">
+                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('https://zoom-eco.net/wp-content/uploads/2024/07/E30A4B75-A12B-4DB6-A0D0-0448A66754BF.jpeg');">
+                    <div class="bottom-gradient"></div>
+                    <div class="thumb-text-holder">   
+                      <h2 class="thumb-entry-title">
+                        <a href="single-post.html">60 jours accordés aux employeurs pour se conformer au Code du travail</a>
+                      </h2>
+                    </div>
+                    <a href="single-post.html" class="thumb-url"></a>
+                  </div>
+                </article>
+                <article class="entry thumb thumb--size-1">
+                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('https://zoom-eco.net/wp-content/uploads/2024/07/393F49AF-F214-41CC-85BE-0C24DEF9C9D2.jpeg');">
+                    <div class="bottom-gradient"></div>
+                    <div class="thumb-text-holder">   
+                      <h2 class="thumb-entry-title">
+                        <a href="single-post.html">RDC : institutions, ministères et services publics invités à déposer leurs prévisions budgétaires pour 2025</a>
+                      </h2>
+                    </div>
+                    <a href="single-post.html" class="thumb-url"></a>
+                  </div>
+                </article>
+                <article class="entry thumb thumb--size-1">
+                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('https://zoom-eco.net/wp-content/uploads/2020/07/CDF-le-17-juillet-2020-@Zoom_eco.jpeg');">              
+                    <div class="bottom-gradient"></div>
+                    <div class="thumb-text-holder">   
+                      <h2 class="thumb-entry-title">
+                        <a href="single-post.html">RDC : le franc congolais a déjà perdu plus de 12% de sa valeur depuis janvier 2020</a>
+                      </h2>
+                    </div>
+                    <a href="single-post.html" class="thumb-url"></a>
+                  </div>
+                </article>
+              </div> <!-- end slider -->
+
+            </section> <!-- end related posts -->            
+
+          </article> <!-- end standard post -->
+
+          <!-- Comments -->
+          <div class="entry-comments">
+            <div class="title-wrap title-wrap--line">
+              <h3 class="section-title">3 commentaires</h3>
+            </div>
+            <ul class="comment-list">
+              <li class="comment">  
+                <div class="comment-body">
+                  <div class="comment-avatar">
+                    <img alt="" src="img/content/single/comment_1.jpg">
+                  </div>
+                  <div class="comment-text">
+                    <h6 class="comment-author">Josue</h6>
+                    <div class="comment-metadata">
+                      <a href="#" class="comment-date">July 12, 2024 at 11:22 pm</a>
+                    </div>                      
+                    <p>Il est crucial que le ministère du Budget respecte les planchers des recettes et les plafonds des dépenses afin de garantir la stabilité économique et la crédibilité du budget. Une gestion rigoureuse des finances publiques est essentielle pour le développement durable du pays.</p>
+                    <a href="#" class="comment-reply">Répondre</a>
+                  </div>
+                </div>
+
+                <ul class="children">
+                  <li class="comment">
+                    <div class="comment-body">
+                      <div class="comment-avatar">
+                        <img alt="" src="img/content/single/comment_2.jpg">
+                      </div>
+                      <div class="comment-text">
+                        <h6 class="comment-author">Moise</h6>
+                        <div class="comment-metadata">
+                          <a href="#" class="comment-date">July 10, 2024 at 11:48 pm</a>  
+                        </div>                      
+                        <p>L'élaboration du Cadre Budgétaire à Moyen Terme (CBMT) est un pas en avant significatif pour une planification budgétaire stratégique. Cela permettra au gouvernement de mieux aligner ses ressources avec ses priorités et de s'assurer que les objectifs à long terme sont atteints.</p>
+                        <a href="#" class="comment-reply">Répondre</a>
+                      </div>
+                    </div>
+                  </li> <!-- end reply comment -->
+                </ul>
+
+              </li> <!-- end 1-2 comment -->
+
+              <li>
+                <div class="comment-body">
+                  <div class="comment-avatar">
+                    <img alt="" src="img/content/single/comment_3.jpg">
+                  </div>
+                  <div class="comment-text">
+                    <h6 class="comment-author">Elohim</h6>
+                    <div class="comment-metadata">
+                      <a href="#" class="comment-date">July 9, 2024 at 1:48 pm</a>  
+                    </div>                      
+                    <p>Le processus transparent de soumission et d'approbation des projets de loi de finances, incluant les conférences budgétaires et les arbitrages gouvernementaux, renforce la confiance du public dans la gestion des finances publiques. La transparence est un pilier fondamental de la bonne gouvernance.</p>
+                    <a href="#" class="comment-reply">Répondre</a>
+                  </div>
+                </div>
+              </li> <!-- end 3 comment -->
+
+            </ul>         
+          </div> <!-- end comments -->
+
+          <!-- Comment Form -->
+          <div id="respond" class="comment-respond">
+            <div class="title-wrap">
+              <h5 class="comment-respond__title section-title">LAISSER UN COMMENTAIRE</h5>
+            </div>
+            <form id="form" class="comment-form" method="post" action="#">
+              <p class="comment-form-comment">
+                <label for="comment">commentaire</label>
+                <textarea id="comment" name="comment" rows="5" required="required"></textarea>
+              </p>
+
+              <div class="row row-20">
+                <div class="col-lg-4">
+                  <label for="name">Nom: *</label>
+                  <input name="name" id="name" type="text">
+                </div>
+                <div class="col-lg-4">
+                  <label for="comment">Email: *</label>
+                  <input name="email" id="email" type="email">
+                </div>
+                <div class="col-lg-4">
+                  <label for="comment">Site Web:</label>
+                  <input name="website" id="website" type="text">
+                </div>
+              </div>
+
+              <p class="comment-form-submit">
+                <input type="submit" class="btn btn-lg btn-color btn-button" value="Commenter" id="submit-message">
+              </p>
+              
+            </form>
+          </div> <!-- end comment form -->
+        </div> <!-- end post content -->
+
+        <!-- Sidebar -->
+        <aside class="col-lg-4 sidebar sidebar--right">
+
+          <!-- Widget Popular Posts -->
+          <aside class="widget widget-popular-posts">
+            <h4 class="widget-title">Articles Populaire</h4>
+            <ul class="post-list-small">
+              <li class="post-list-small__item">
+                <article class="post-list-small__entry clearfix">
+                  <div class="post-list-small__img-holder">
+                    <div class="thumb-container thumb-100">
+                      <a href="single-post.html">
+                        <img data-src="https://photos.radiookapi.net/picture/20230426102933405689_IMG-20230425-WA0020.jpg?imgmax=800" src="img/empty.png" alt="" class=" lazyload">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="post-list-small__body">
+                    <h3 class="post-list-small__entry-title">
+                      <a href="single-post.html">La DGDA Kasai-Oriental n’atteind plus ses assignations depuis 5 ans</a>
+                    </h3>
+                    <ul class="entry__meta">
+                      <li class="entry__meta-author">
+                        <span>PAR</span>
+                        <a href="#">Rédaction</a>
+                      </li>
+                      <li class="entry__meta-date">
+                        Jul 2, 2024
+                      </li>
+                    </ul>
+                  </div>                  
+                </article>
+              </li>
+              <li class="post-list-small__item">
+                <article class="post-list-small__entry clearfix">
+                  <div class="post-list-small__img-holder">
+                    <div class="thumb-container thumb-100">
+                      <a href="single-post.html">
+                        <img data-src="https://lh3.googleusercontent.com/--omG4bwXGEk/V_EGn8BWMKI/AAAAAAAB590/NRnRAntJdeAAg185twmegWDyiJCrHV6rACHMYBhgL/Caf%25C3%25A9%2B2.jpg?imgmax=800" src="img/empty.png" alt="" class=" lazyload">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="post-list-small__body">
+                    <h3 class="post-list-small__entry-title">
+                      <a href="single-post.html">Le café congolais, l’un des meilleurs au monde, fait face à plusieurs défis</a>
+                    </h3>
+                    <ul class="entry__meta">
+                      <li class="entry__meta-author">
+                        <span>PAR</span>
+                        <a href="#">Rédaction</a>
+                      </li>
+                      <li class="entry__meta-date">
+                        Jul 1, 2024
+                      </li>
+                    </ul>
+                  </div>                  
+                </article>
+              </li>
+              <li class="post-list-small__item">
+                <article class="post-list-small__entry clearfix">
+                  <div class="post-list-small__img-holder">
+                    <div class="thumb-container thumb-100">
+                      <a href="single-post.html">
+                        <img data-src="https://photos.radiookapi.net/picture/20240705205440705970_b75be67a-a5e3-48b3-b181-b59e39207218.jfif?imgmax=800" src="img/empty.png" alt="" class=" lazyload">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="post-list-small__body">
+                    <h3 class="post-list-small__entry-title">
+                      <a href="single-post.html">La maîtrise de l'inflation et de la stabilisation de la monnaie nationale au menu de la réunion du comité de conjoncture économique</a>
+                    </h3>
+                    <ul class="entry__meta">
+                      <li class="entry__meta-author">
+                        <span>Par</span>
+                        <a href="#">Rédaction</a>
+                      </li>
+                      <li class="entry__meta-date">
+                        Jui 21, 2024
+                      </li>
+                    </ul>
+                  </div>                  
+                </article>
+              </li>
+              <li class="post-list-small__item">
+                <article class="post-list-small__entry clearfix">
+                  <div class="post-list-small__img-holder">
+                    <div class="thumb-container thumb-100">
+                      <a href="single-post.html">
+                        <img data-src="https://deskeco.com/sites/default/files/styles/1024x578/public/2023-11/IMG-20231124-WA0031.jpg?itok=JMai8w0y" src="img/empty.png" alt="" class=" lazyload">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="post-list-small__body">
+                    <h3 class="post-list-small__entry-title">
+                      <a href="single-post.html">Kisangani : la SNEL à pieds d'œuvre pour le raccordement de toutes les cabines électriques de la commune de Lubunga</a>
+                    </h3>
+                    <ul class="entry__meta">
+                      <li class="entry__meta-author">
+                        <span>PAR</span>
+                        <a href="#">Rédaction</a>
+                      </li>
+                      <li class="entry__meta-date">
+                        Jan 21, 2024
+                      </li>
+                    </ul>
+                  </div>                  
+                </article>
+              </li>
+            </ul>           
+          </aside> <!-- end widget popular posts -->
+
+          <!-- Widget Newsletter -->
+          <aside class="widget widget_mc4wp_form_widget">
+            <h4 class="widget-title">Newsletter</h4>
+            <p class="newsletter__text">
+              <i class="ui-email newsletter__icon"></i>
+              Abonnez-vous à notre actualité quotidienne
+            </p>
+            <form class="mc4wp-form" method="post">
+              <div class="mc4wp-form-fields">
+                <div class="form-group">
+                  <input type="email" name="EMAIL" placeholder="Votre mail" required="">
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-lg btn-color" value="S'abonner">
+                </div>
+              </div>
+            </form>
+          </aside> <!-- end widget newsletter -->
+
+          <!-- Widget Socials -->
+          <aside class="widget widget-socials">
+            <h4 class="widget-title">réseaux sociaux</h4>
+            <div class="socials socials--wide socials--large">
+              <div class="row row-16">
+                <div class="col">
+                  <a class="social social-facebook" href="https://www.facebook.com/profile.php?id=61562658741420" title="facebook" target="_blank" aria-label="facebook">
+                    <i class="ui-facebook"></i>
+                    <span class="social__text">Facebook</span>
+                  </a><!--
+                  --><a class="social social-twitter" href="https://x.com/marketrdc" title="twitter" target="_blank" aria-label="twitter">
+                    <i class="ui-twitter"></i>
+                    <span class="social__text">Twitter</span>
+                  </a>
+                </div>
+                <div class="col">
+                  <!--
+                  --><a class="social social-youtube" href="https://www.youtube.com/@MarketRDC" title="youtube" target="_blank" aria-label="youtube">
+                    <i class="ui-youtube"></i>
+                    <span class="social__text">Youtube</span>
+                  </a>
+                  <!--
+                  --><a class="social social-instagram" href="https://www.instagram.com/market.rdc/" title="instagram" target="_blank" aria-label="instagram">
+                    <i class="ui-instagram"></i>
+                    <span class="social__text">Instagram</span>
+                  </a><!--
+                  -->
+                </div>                
+              </div>            
+            </div>
+          </aside> <!-- end widget socials -->
+
+        </aside> <!-- end sidebar -->
+  
+      </div> <!-- end content -->
+    </div> <!-- end main container -->
+
+    <!-- Footer -->
+    <footer class="footer footer--1">
+      <div class="container">
+        <div class="footer__widgets footer__widgets--short top-divider">
+          <div class="row">
+
+            <div class="col-lg-6">
+              <ul class="footer__nav-menu">
+                <li><a href="#">Apropos</a></li>
+                <li><a href="index.html">News</a></li>
+                <li><a href="#">Publicité</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>       
+            </div>
+
+            <div class="col-lg-6">
+              <div class="socials socials--large socials--rounded justify-content-lg-end">
+                <a href="https://www.facebook.com/profile.php?id=61562658741420" class="social social-facebook" aria-label="facebook"><i class="ui-facebook"></i></a>
+                <a href="https://x.com/marketrdc" class="social social-twitter" aria-label="twitter"><i class="ui-twitter"></i></a>
+                <a href="https://www.youtube.com/@MarketRDC" class="social social-youtube" aria-label="youtube"><i class="ui-youtube"></i></a>
+                <a href="https://www.instagram.com/market.rdc/" class="social social-instagram" aria-label="instagram"><i class="ui-instagram"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>    
+      </div> <!-- end container -->
+    </footer> <!-- end footer -->
+
+    <div id="back-to-top">
+      <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
+    </div>
+
+  </main> <!-- end main-wrapper -->
+
+  
+  <!-- jQuery Scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/easing.min.js"></script>
+  <script src="js/owl-carousel.min.js"></script>
+  <script src="js/flickity.pkgd.min.js"></script>
+  <script src="js/twitterFetcher_min.js"></script>
+  <script src="js/jquery.sticky-kit.min.js"></script>
+  <script src="js/jquery.newsTicker.min.js"></script>  
+  <script src="js/modernizr.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    const apiKey = '43eb3d226e9e92dc18d75758d24add02';
+    const currentEndpoint = `https://data.fixer.io/api/latest?access_key=${apiKey}&symbols=CDF,USD,EUR,XAF,GBP,JPY,ZAR,SAR,AED,CHF,CAD`;
+  
+    const currencyNames = {
+        'USD': 'Dollar des États-Unis',
+        'EUR': 'Euro',
+        'XAF': 'Franc CFA (BEAC)',
+        'GBP': 'Livre Sterling',
+        'JPY': 'Yen Japonais',
+        'ZAR': 'Rand Sud-Africain',
+        'SAR': 'Riyal Saoudien',
+        'AED': 'Dirham des Émirats Arabes Unis',
+        'CHF': 'Franc Suisse',
+        'CAD': 'Dollar Canadien',
+        'CDF': 'Franc Congolais'
+    };
+  
+    async function getExchangeRates() {
+        try {
+            const response = await fetch(currentEndpoint);
+            const data = await response.json();
+  
+            if (data.success) {
+                return data.rates;
+            } else {
+                throw new Error('Erreur lors de la récupération des données');
+            }
+        } catch (error) {
+            console.error('Erreur:', error);
+        }
+    }
+  
+    async function updateExchangeRatesList() {
+        const rates = await getExchangeRates();
+        if (rates) {
+            const exchangeRatesList = document.querySelector('#exchange-rates');
+  
+            exchangeRatesList.innerHTML = ''; // Effacer les anciennes données
+  
+            Object.keys(rates).forEach(currency => {
+                if (currency !== 'CDF') { // Ne pas inclure le taux CDF en termes de CDF
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('newsticker__item');
+  
+                    // Calculer le taux en termes de la devise de contrepartie
+                    const rateInBaseCurrency = (1 / rates[currency]).toFixed(4); // Taux de la devise par rapport à CDF
+                    const rateInTargetCurrency = (rateInBaseCurrency * rates['CDF']).toFixed(2); // Taux en CDF
+  
+                    listItem.textContent = `${currency} : ${rateInTargetCurrency.replace('.', ',')} CDF`;
+                    exchangeRatesList.appendChild(listItem);
+                }
+            });
+  
+        }
+    }
+  
+    async function setup() {
+        await updateExchangeRatesList();
+    }
+  
+    setup();
+  </script>
+</body>
+</html>

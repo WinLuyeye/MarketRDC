@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taux de Change</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .newsticker {
+            margin: 20px 0;
+        }
+        .newsticker__list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .newsticker__item {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .newsticker__item-url {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Taux de Change des Devises par rapport au CDF</h1>
+    <div class="newsticker">
+        <ul class="newsticker__list" id="exchange-rates">
+            <!-- Les données seront insérées ici par JavaScript -->
+        </ul>
+    </div>
+
+    <script>
+        const apiKey = '43eb3d226e9e92dc18d75758d24add02';
+        const endpoint = `https://data.fixer.io/api/latest?access_key=${apiKey}&symbols=CDF,USD,EUR,XAF,GBP,JPY,ZAR,SAR,AED,CHF,CAD`;
+
+        async function getExchangeRates() {
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+
+                if (data.success) {
+                    return data.rates;
+                } else {
+                    throw new Error('Erreur lors de la récupération des données');
+                }
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+        }
+
+        getExchangeRates().then(rates => {
+            if (rates) {
+                const cdfRate = rates.CDF; // Taux de base CDF
+                const ul = document.querySelector('#exchange-rates');
+
+                Object.keys(rates).forEach(currency => {
+                    if (currency !== 'CDF') { // Ne pas inclure le taux CDF/CDF
+                        const li = document.createElement('li');
+                        li.className = 'newsticker__item';
+                        const a = document.createElement('a');
+                        a.href = "taux_de_change.html";
+                        a.className = 'newsticker__item-url';
+                        const rateInCDF = (cdfRate / rates[currency]).toFixed(2); // Convertir le taux en termes de CDF
+                        a.textContent = `1 ${currency} = ${rateInCDF} CDF`;
+                        li.appendChild(a);
+                        ul.appendChild(li);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
