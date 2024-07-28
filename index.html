@@ -129,7 +129,7 @@
 
         <!-- Categories -->
         <li>
-          <a href="#" class="sidenav__menu-url">Language Economique</a>
+          <a href="#" class="sidenav__menu-url">Langage Economique</a>
         </li>
         <li>
           <a href="#" class="sidenav__menu-url">Market RDC</a>
@@ -254,7 +254,7 @@
                 </li>
 
                 <li class="">
-                  <a href="#">Language Economique</a>
+                  <a href="#">Langage Economique</a>
                 </li>
 
                  <li class="">
@@ -359,9 +359,9 @@
               <div class="col-md-6">
                 <article class="entry">
                   <div class="entry__img-holder">
-                    <a href="https://www.youtube.com/embed/ZJBCesVm-ZA?si=UhUQMydWsC6sRcyJ" target="_blank">
+                    <a href="" target="_blank">
                       <div class="thumb-container thumb-65" style="padding-bottom: 0%;width: 100%; height: 188.7px;">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZJBCesVm-ZA?si=UhUQMydWsC6sRcyJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <video src="./video/video1.mp4" controls autoplay></video>
                       </div>
                     </a>
                   </div>
@@ -383,9 +383,10 @@
               <div class="col-md-6">
                 <article class="entry">
                   <div class="entry__img-holder">
-                    <a href="">
+                    <a href="cour_des_comptes.html">
                       <div class="thumb-container thumb-65">
-                        <img data-src="https://i0.wp.com/www.politicordc.com/wp-content/uploads/2024/07/Screenshot-2024-07-11-at-16.15.20.png?resize=1045%2C623&quality=80&ssl=1" src="https://i0.wp.com/www.politicordc.com/wp-content/uploads/2024/07/Screenshot-2024-07-11-at-16.15.20.png?resize=1045%2C623&quality=80&ssl=1" class="entry__img lazyload" alt="" />
+                        <img data-src="./img/Audio.jpg" class="entry__img lazyload" alt="" />
+                        <audio controls src="./audio/audio1.mp3" style="position: absolute; bottom: 5%; height: 35px; width: 260px;margin: 0 5%;"></audio>
                       </div>
                     </a>
                   </div>
@@ -398,7 +399,7 @@
                         </li>
                       </ul>                      
                       <h2 class="entry__title">
-                        <a href="">Airtel Money : Un Moteur de Croissance pour l’Inclusion Financière et Digitale en RDC</a>
+                        <a href="cour_des_comptes.html">La La cour des comptes exige un arsenal juridique plus contraignant  exige un arsenal juridique plus contraignant</a>
                       </h2>
                     </div>
                   </div>
@@ -1086,9 +1087,9 @@
 
             <div class="col-lg-6">
               <ul class="footer__nav-menu">
-                <li><a href="#">Apropos</a></li>
-                <li><a href="index.html">News</a></li>
-                <li><a href="#">Publicité</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="taux_de_change.html">Taux de change</a></li>
+                <li><a href="agenda_economique.html">Agenda Econimique</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>             
             </div>
@@ -1206,69 +1207,9 @@
   // Update the countdown every second
   setInterval(updateCountdown, 1000);
 </script>
-<script>
-  const apiKey = '43eb3d226e9e92dc18d75758d24add02';
-  const currentEndpoint = `https://data.fixer.io/api/latest?access_key=${apiKey}&symbols=CDF,USD,EUR,XAF,GBP,JPY,ZAR,SAR,AED,CHF,CAD`;
 
-  const currencyNames = {
-      'USD': 'Dollar des États-Unis',
-      'EUR': 'Euro',
-      'XAF': 'Franc CFA (BEAC)',
-      'GBP': 'Livre Sterling',
-      'JPY': 'Yen Japonais',
-      'ZAR': 'Rand Sud-Africain',
-      'SAR': 'Riyal Saoudien',
-      'AED': 'Dirham des Émirats Arabes Unis',
-      'CHF': 'Franc Suisse',
-      'CAD': 'Dollar Canadien',
-      'CDF': 'Franc Congolais'
-  };
-
-  async function getExchangeRates() {
-      try {
-          const response = await fetch(currentEndpoint);
-          const data = await response.json();
-
-          if (data.success) {
-              return data.rates;
-          } else {
-              throw new Error('Erreur lors de la récupération des données');
-          }
-      } catch (error) {
-          console.error('Erreur:', error);
-      }
-  }
-
-  async function updateExchangeRatesList() {
-      const rates = await getExchangeRates();
-      if (rates) {
-          const exchangeRatesList = document.querySelector('#exchange-rates');
-
-          exchangeRatesList.innerHTML = ''; // Effacer les anciennes données
-
-          Object.keys(rates).forEach(currency => {
-              if (currency !== 'CDF') { // Ne pas inclure le taux CDF en termes de CDF
-                  const listItem = document.createElement('li');
-                  listItem.classList.add('newsticker__item');
-
-                  // Calculer le taux en termes de la devise de contrepartie
-                  const rateInBaseCurrency = (1 / rates[currency]).toFixed(4); // Taux de la devise par rapport à CDF
-                  const rateInTargetCurrency = (rateInBaseCurrency * rates['CDF']).toFixed(2); // Taux en CDF
-
-                  listItem.textContent = `${currency} : ${rateInTargetCurrency.replace('.', ',')} CDF`;
-                  exchangeRatesList.appendChild(listItem);
-              }
-          });
-          document.getElementById('usd-rate').textContent = `1 USD = ${(rates.CDF / rates.USD).toFixed(0).replace('.', ',')} ${currencyNames['CDF']}`;
-      }
-  }
-
-  async function setup() {
-      await updateExchangeRatesList();
-  }
-
-  setup();
-</script>
+  <!--newsticker data and script-->
+  <script src="js/fixer_and_script/cours-de-change.js"></script>
 
 </body>
 </html>
